@@ -1,0 +1,143 @@
+.container {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 128px;
+  padding-right: 128px;
+  display: flex;
+  gap: 125px;
+  margin-top: 78px;
+}
+
+.welcomeText {
+  width: 595px;
+  display: flex;
+  align-items: center;
+}
+
+.title {
+  font-weight: 600;
+  font-size: 80px;
+  line-height: 1.025;
+  letter-spacing: -0.02em;
+  color: var(--color-font-main);
+  margin-bottom: 20px;
+}
+
+.titleColor {
+  font-style: italic;
+  color: var(--color-font-second);
+}
+
+.text {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 1.33333;
+  letter-spacing: -0.02em;
+  color: var(--color-font-main);
+  width: 510px;
+  margin-bottom: 40px;
+}
+
+.startBtn {
+  border-radius: 30px;
+  /* padding-left: 50px; */
+  text-align: center;
+  width: 235px;
+  height: 60px;
+  background: var(--color-font-second);
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 1.2;
+  letter-spacing: -0.01em;
+  color: var(--color-main-bg);
+  border: none;
+}
+
+.iconBtn {
+  margin-left: 18px;
+  fill: var(--color-main-bg);
+}
+
+.startBtn:hover {
+  background: var(--color-second-bg-hover);
+}
+
+.imgContainer {
+  border-radius: 10px;
+  width: 464px;
+  height: 526px;
+  position: relative;
+}
+
+.iconImg {
+  fill: var(--color-main-bg);
+}
+
+.iconQuestion {
+  border-radius: 10px;
+  width: 40px;
+  height: 40px;
+  background: #54be96;
+  transform: rotate(-15deg);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 185px;
+  left: -35px;
+}
+
+.iconUsers {
+  border-radius: 10px;
+  width: 48px;
+  height: 48px;
+  background: #fbc75e;
+  transform: rotate(15deg);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 40px;
+  right: -38px;
+}
+
+.imgTextContainer {
+  border-radius: 20px;
+  width: 311px;
+  height: 118px;
+  background: var(--color-font-second);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+  position: absolute;
+  bottom: 75px;
+  left: -100px;
+}
+
+.iconCheckContainer {
+  border-radius: 13px;
+  width: 54px;
+  height: 54px;
+  background: var(--color-main-bg);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.iconCheck {
+  fill: var(--color-font-second);
+}
+
+.imgText {
+  font-size: 14px;
+  color: rgba(251, 251, 251, 0.5);
+  margin-bottom: 8px;
+}
+
+.imgTextCount {
+  font-weight: 700;
+  font-size: 24px;
+  color: var(--color-main-bg);
+}
