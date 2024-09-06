@@ -12,7 +12,7 @@ const FavoritesPage = lazy(() => import("./pages/FavoritesPage/FavoritesPage"));
 function App() {
   return (
     <>
-      {/* <AppBar />
+      <AppBar />
       <Suspense fallback={null}>
         <Routes>
           <Route path="/" element={<HomePage />} />
@@ -20,8 +20,8 @@ function App() {
           <Route path="/favorites" element={<FavoritesPage />} />
           <Route path="*" element={<Navigate to="/" />} />
         </Routes>
-      </Suspense> */}
-      <WelcomeSection />
+      </Suspense>
+      {/* <WelcomeSection /> */}
     </>
   );
 }
