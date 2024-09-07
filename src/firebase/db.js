@@ -30,11 +30,15 @@ export async function getPsychologists() {
 
   try {
     const snapshot = await get(dbRef);
+    const data = [];
     if (snapshot.exists()) {
-      return snapshot.val();
-    } else {
-      console.log("No data available");
+      const res = snapshot.exportVal();
+      for (const [key, value] of Object.entries(res)) {
+        data.push({ id: key, ...value });
+      }
     }
+
+    return { data };
   } catch (error) {
     return error.message;
   }

@@ -1,4 +1,4 @@
-export default function HomePage() {
+export default function FavoritesPage() {
   return (
     <div>
       <h1>Welcome Favorites</h1>

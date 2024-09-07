@@ -1,10 +1,12 @@
 import icons from "../../assets/sprite.svg";
+import styles from "./PsychologistsItem.module.css";
 
-const PsychologistsItem = ({ psychologist, handleFavoriteBtn, openModal }) => {
+const PsychologistsItem = ({ psychologist }) => {
   return (
-    <>
-      <div>
+    <div className={styles.cardContainer}>
+      <div className={styles.photoContainer}>
         <img
+          className={styles.photo}
           src={psychologist.avatar_url}
           alt="psychologist photo"
           width="96"
@@ -12,21 +14,23 @@ const PsychologistsItem = ({ psychologist, handleFavoriteBtn, openModal }) => {
         />
       </div>
       <div>
-        <div>
-          <p>Psychologist</p>
-          <h2>{psychologist.name}</h2>
-        </div>
-        <div>
-          <svg width={16} height={16}>
-            <use href={`${icons}#icon-star`}></use>
-          </svg>
-          <p>Rating: {psychologist.rating}</p>
-          <p>Price/ 1 hour: {psychologist.price_per_hour}$</p>
-          <button onClick={() => handleFavoriteBtn(psychologist.id)}>
-            <svg width={26} height={26}>
-              <use href={`${icons}#icon-heart`}></use>
+        <div className={styles.nameContainer}>
+          <div>
+            <p className={styles.psy}>Psychologist</p>
+            <h2 className={styles.name}>{psychologist.name}</h2>
+          </div>
+          <div className={styles.ratingContainer}>
+            <svg width={16} height={16}>
+              <use href={`${icons}#icon-star`}></use>
             </svg>
-          </button>
+            <p>Rating: {psychologist.rating}</p>
+            <p>Price/ 1 hour: {psychologist.price_per_hour}$</p>
+            <button onClick={() => console.log("favorites")}>
+              <svg width={26} height={26}>
+                <use href={`${icons}#icon-heart`}></use>
+              </svg>
+            </button>
+          </div>
         </div>
         <div>
           <ul>
@@ -54,11 +58,11 @@ const PsychologistsItem = ({ psychologist, handleFavoriteBtn, openModal }) => {
           </ul>
           <p>{psychologist.about}</p>
         </div>
-        <button type="submit" onClick={() => openModal(psychologist.id)}>
+        <button type="submit" onClick={() => console.log("modal")}>
           Read more
         </button>
       </div>
-    </>
+    </div>
   );
 };
 

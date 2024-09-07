@@ -6,7 +6,7 @@ export const fetchPsychologists = createAsyncThunk(
   async (_, thunkAPI) => {
     try {
       const response = await getPsychologists();
-      return response;
+      return response.data;
     } catch (error) {
       return thunkAPI.rejectWithValue(error.message);
     }

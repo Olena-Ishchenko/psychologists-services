@@ -1,0 +1,44 @@
+.cardContainer {
+  display: flex;
+  gap: 24px;
+}
+
+.photoContainer {
+  border: 2px solid rgba(252, 131, 44, 0.2);
+  border-radius: 30px;
+  min-width: 120px;
+  height: 120px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.photo {
+  border-radius: 15px;
+  height: 96px;
+}
+
+.nameContainer {
+  display: flex;
+  justify-content: space-between;
+}
+
+.psy {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #8a8a89;
+  margin-bottom: 8px;
+}
+
+.name {
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 1;
+  color: var(--color-font-main);
+}
+
+.ratingContainer {
+  display: flex;
+  flex-direction: row;
+}
