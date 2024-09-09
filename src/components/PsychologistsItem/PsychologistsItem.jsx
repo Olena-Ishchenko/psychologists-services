@@ -20,45 +20,70 @@ const PsychologistsItem = ({ psychologist }) => {
             <h2 className={styles.name}>{psychologist.name}</h2>
           </div>
           <div className={styles.ratingContainer}>
-            <svg width={16} height={16}>
+            <svg className={styles.iconStar} width={16} height={16}>
               <use href={`${icons}#icon-star`}></use>
             </svg>
-            <p>Rating: {psychologist.rating}</p>
-            <p>Price/ 1 hour: {psychologist.price_per_hour}$</p>
-            <button onClick={() => console.log("favorites")}>
-              <svg width={26} height={26}>
+
+            <p className={styles.rating}>Rating: {psychologist.rating}</p>
+            <p className={styles.priceText}>
+              Price/ 1 hour:{" "}
+              <span className={styles.price}>
+                {" "}
+                {psychologist.price_per_hour}$
+              </span>
+            </p>
+            <button
+              className={styles.favoriteBtn}
+              onClick={() => console.log("favorites")}
+            >
+              <svg className={styles.iconHeart} width={26} height={26}>
                 <use href={`${icons}#icon-heart`}></use>
               </svg>
             </button>
           </div>
         </div>
         <div>
-          <ul>
-            <li>
-              <p>
-                Experince: <span>{psychologist.experience}</span>
+          <ul className={styles.descrList}>
+            <li className={styles.descrItem}>
+              <p className={styles.descr}>
+                Experince:{" "}
+                <span className={styles.descrDetails}>
+                  {psychologist.experience}
+                </span>
               </p>
             </li>
-            <li>
-              <p>
-                License: <span>{psychologist.license}</span>
+            <li className={styles.descrItem}>
+              <p className={styles.descr}>
+                License:{" "}
+                <span className={styles.descrDetails}>
+                  {psychologist.license}
+                </span>
               </p>
             </li>
-            <li>
-              <p>
-                Specialization: <span>{psychologist.specialization}</span>
+            <li className={styles.descrItem}>
+              <p className={styles.descr}>
+                Specialization:{" "}
+                <span className={styles.descrDetails}>
+                  {psychologist.specialization}
+                </span>
               </p>
             </li>
-            <li>
-              <p>
+            <li className={styles.descrItem}>
+              <p className={styles.descr}>
                 Initial_consultation:{" "}
-                <span>{psychologist.initial_consultation}</span>
+                <span className={styles.descrDetails}>
+                  {psychologist.initial_consultation}
+                </span>
               </p>
             </li>
           </ul>
-          <p>{psychologist.about}</p>
+          <p className={styles.aboutText}>{psychologist.about}</p>
         </div>
-        <button type="submit" onClick={() => console.log("modal")}>
+        <button
+          className={styles.moreBtn}
+          type="submit"
+          onClick={() => console.log("modal")}
+        >
           Read more
         </button>
       </div>
