@@ -1,7 +1,7 @@
 import icons from "../../assets/sprite.svg";
 import styles from "./PsychologistsItem.module.css";
 
-const PsychologistsItem = ({ psychologist }) => {
+const PsychologistsItem = ({ psychologist, openModal }) => {
   return (
     <div className={styles.cardContainer}>
       <div className={styles.photoContainer}>
@@ -82,7 +82,7 @@ const PsychologistsItem = ({ psychologist }) => {
         <button
           className={styles.moreBtn}
           type="submit"
-          onClick={() => console.log("modal")}
+          onClick={() => openModal(psychologist.id)}
         >
           Read more
         </button>

@@ -1,7 +1,6 @@
 import { lazy, Suspense } from "react";
 import { Route, Routes, Navigate } from "react-router-dom";
 import AppBar from "./components/AppBar/AppBar";
-import WelcomeSection from "./components/WelcomeSection/WelcomeSection";
 
 const HomePage = lazy(() => import("./pages/HomePage/HomePage"));
 const PsychologistsPage = lazy(() =>
@@ -21,7 +20,6 @@ function App() {
           <Route path="*" element={<Navigate to="/" />} />
         </Routes>
       </Suspense>
-      {/* <WelcomeSection /> */}
     </>
   );
 }

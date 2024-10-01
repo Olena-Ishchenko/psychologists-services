@@ -4,7 +4,7 @@ import { yupResolver } from "@hookform/resolvers/yup";
 import icons from "../../assets/sprite.svg";
 import { useState } from "react";
 
-const RegistrationForm = () => {
+const RegistrationForm = ({ closeForm }) => {
   const [showPassword, setShowPassword] = useState(false);
 
   const schemaValidation = Yup.object({
@@ -46,7 +46,7 @@ const RegistrationForm = () => {
           need some information. Please provide us with the following
           information.
         </p>
-        <button type="submit" onClick={() => console.log("close")}>
+        <button type="submit" onClick={closeForm}>
           <svg width={32} height={32}>
             <use href={`${icons}#icon-close`}></use>
           </svg>

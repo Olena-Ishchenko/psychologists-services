@@ -1,0 +1,85 @@
+.formContainer {
+  position: relative;
+  border-radius: 30px;
+  width: 565px;
+  height: 509px;
+  background: var(--color-main-bg);
+  padding: 64px;
+}
+
+.formCloseBtn {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: transparent;
+  border: none;
+}
+
+.formCloseBtnIcon {
+  stroke: var(--color-font-main);
+}
+
+.formTitle {
+  font-weight: 500;
+  font-size: 40px;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+  color: var(--color-font-main);
+  margin-bottom: 20px;
+}
+
+.formText {
+  font-size: 16px;
+  line-height: 1.25;
+  color: rgba(25, 26, 21, 0.5);
+  margin-bottom: 40px;
+}
+
+.formInputContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.formInput {
+  border: 1px solid rgba(25, 26, 21, 0.1);
+  border-radius: 12px;
+  padding: 16px 18px;
+  width: 438px;
+  height: 52px;
+  background: transparent;
+}
+
+.formInputPassword {
+  position: relative;
+}
+
+.formPasswordHiddenBtn {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  border: none;
+  background: transparent;
+}
+
+.formPasswordHidden {
+  fill: transparent;
+  stroke: var(--color-font-main);
+}
+
+.formSubmitBtn {
+  border-radius: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 438px;
+  height: 52px;
+  background: var(--color-font-second);
+  border: none;
+  margin-top: 40px;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.25;
+  letter-spacing: -0.01em;
+  color: var(--color-main-bg);
+}

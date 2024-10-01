@@ -1,7 +1,7 @@
 import ReactModal from "react-modal";
-// import icons from "../../assets/sprite.svg";
+import styles from "./ModalContainer.module.css";
 
-const ModalContainer = ({ modalIsOpen = false, onChange, child }) => {
+const ModalContainer = ({ modalIsOpen = false, onChange, children }) => {
   ReactModal.setAppElement(document.getElementById("root"));
 
   return (
@@ -11,8 +11,10 @@ const ModalContainer = ({ modalIsOpen = false, onChange, child }) => {
       shouldCloseOnOverlayClick={true}
       shouldCloseOnEsc={true}
       preventScroll={true}
+      overlayClassName={styles.overlay}
+      className={styles.modalContainer}
     >
-      <div></div>
+      <div>{children}</div>
     </ReactModal>
   );
 };
