@@ -2,7 +2,7 @@
   position: relative;
   border-radius: 30px;
   width: 565px;
-  height: 509px;
+  /* height: 509px; */
   background: var(--color-main-bg);
   padding: 64px;
 }
